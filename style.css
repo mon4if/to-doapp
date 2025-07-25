@@ -78,3 +78,35 @@ li {
 .delete-btn:hover {
   background-color: #c82333;
 }
+
+/* Smoothly fade in each new task */
+li {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeIn 0.4s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Button bounce effect on hover */
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Delete button hover shake */
+.delete-btn:hover {
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
